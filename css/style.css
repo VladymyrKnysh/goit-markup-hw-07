@@ -60,50 +60,56 @@ ul {
   padding: 0 15px;
   margin: 0 auto;
   width: 1200px;
-  /* outline: 2px solid tomato; */
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-/* ---------------------Page-header -------------------*/
 
-.main-container {
+/* ---------------------Page-header -------------------*/
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container--flex {
   display: flex;
   align-items: center;
   justify-content: start;
 }
-.page-header {
-  border-bottom: 1px solid #ececec;
-}
+
 /*--------------------- nav-logo -----------*/
 .nav {
   display: flex;
   align-items: center;
 }
-.nav-logo {
+.logo {
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-}
-.web {
   color: var(--accent-color);
 }
-.studio {
+
+.logo__text {
   color: var(--black-logo-color);
 }
+.logo__text--white {
+  color: var(--white-color);
+}
 /* --------------------nav-links------------------ */
-.nav-links {
+.sait-nav {
   display: flex;
+}
+.page-header__sait-nav {
   margin-left: 93px;
 }
-.nav-item + .nav-item {
-  margin-left: 50px;
+
+.sait-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
-.nav-link {
+.sait-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -119,14 +125,14 @@ ul {
   transition: color 250ms var(--cubic-bezier);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.sait-nav__link:hover,
+.sait-nav__link:focus {
   color: var(--accent-color);
 }
-.nav-link.current {
+.sait-nav__link--active {
   color: var(--accent-color);
 }
-.nav-link.current::after {
+.sait-nav__link--active::after {
   position: absolute;
   content: '';
   bottom: -1px;
@@ -142,14 +148,14 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.contacts-item + .contacts-item {
-  margin-left: 50px;
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
 }
-.contacts-item {
+.contacts__item {
   margin-left: auto;
 }
 
-.contacts-link {
+.contacts__link {
   display: flex;
   align-items: center;
   color: var(--secondary-text-color);
@@ -163,12 +169,12 @@ ul {
   transition: color 250ms var(--cubic-bezier);
 }
 
-.contacts-link:hover,
+.contacts__link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
 }
 
-.contacts-icon {
+.contacts__icon {
   margin-right: 10px;
 }
 /* --------------------Hero----------------------------------------- */
@@ -593,11 +599,12 @@ ul {
   padding: 60px 0;
   background-color: rgba(47, 48, 58, 1);
 }
-/* Логотип */
-.studio-white {
-  color: var(--white-color);
+.container--arrange {
+  display: flex;
+  align-items: baseline;
 }
-address {
+
+.address {
   font-style: normal;
 }
 .footer-address {
@@ -636,10 +643,7 @@ address {
   color: var(--accent-color);
 }
 /* -------------------присоединяйтесь --------*/
-.box {
-  display: flex;
-  align-items: baseline;
-}
+
 .thumb {
   margin-right: 93px;
 }
