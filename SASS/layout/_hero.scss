@@ -1,6 +1,15 @@
 .hero {
   background-color: #2f303a;
   padding: 200px 0;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/overlay.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   margin-top: 0;
@@ -31,14 +40,3 @@
   margin: 0 auto;
 }
 /* -----------------Overlay ---------------*/
-.overlay {
-  height: 600px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/overlay.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}

@@ -2,7 +2,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.container--flex {
+.page-header__container {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -29,15 +29,15 @@
   color: var(--white-color);
 }
 /* --------------------nav-links------------------ */
-.sait-nav {
+.site-nav {
   display: flex;
   margin-left: 93px;
 }
-.sait-nav__item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.sait-nav__link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -57,7 +57,7 @@
   }
 }
 
-.sait-nav__link--active {
+.site-nav__link--active {
   color: var(--accent-color);
   &::after {
     position: absolute;

@@ -62,6 +62,12 @@ ul {
   width: 1200px;
 }
 
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .section-title {
   font-size: 36px;
   line-height: 1.2;
@@ -72,12 +78,6 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.container--flex {
-  display: flex;
-  align-items: center;
-  justify-content: start;
 }
 
 .nav {
@@ -476,7 +476,7 @@ ul {
   border-bottom: 1px solid #ececec;
 }
 
-.container--flex {
+.page-header__container {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -506,16 +506,16 @@ ul {
 }
 
 /* --------------------nav-links------------------ */
-.sait-nav {
+.site-nav {
   display: flex;
   margin-left: 93px;
 }
 
-.sait-nav__item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.sait-nav__link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -528,14 +528,14 @@ ul {
   letter-spacing: 0.02em;
   transition: color 250ms var(--cubic-bezier);
 }
-.sait-nav__link:hover, .sait-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: var(--accent-color);
 }
 
-.sait-nav__link--active {
+.site-nav__link--active {
   color: var(--accent-color);
 }
-.sait-nav__link--active::after {
+.site-nav__link--active::after {
   position: absolute;
   content: "";
   bottom: -1px;
@@ -583,6 +583,14 @@ ul {
 .hero {
   background-color: #2f303a;
   padding: 200px 0;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overlay.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -616,17 +624,6 @@ ul {
 }
 
 /* -----------------Overlay ---------------*/
-.overlay {
-  height: 600px;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overlay.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 .features {
   display: flex;
 }
@@ -773,12 +770,11 @@ ul {
   margin: 0;
 }
 
-.company-item + .company-item {
-  margin-left: 30px;
-}
-
 .company-item {
   color: var(--icon-primary-color);
+}
+.company-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .company-link {
